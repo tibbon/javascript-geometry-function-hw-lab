@@ -1,6 +1,6 @@
 # Geometry Function Lab/Homework
 
-Please create a javascript file in this repository that fulfills the following requirements. This assignment is due Tuesday morning at 9am. Turn it in Github Pull Request. 
+Please create a javascript file in this repository that fulfills the following requirements. This assignment is due Tuesday morning at 9am. Turn it in via a Github Pull Request. 
 
 ### Part 1, Rectangle
 
