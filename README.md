@@ -1,4 +1,4 @@
-# Geometry Function Lab
+# Geometry Function Lab/Homework
 
 Given the following a `rectangle` object like the one below, write the following functions:
 
