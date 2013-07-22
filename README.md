@@ -19,7 +19,7 @@ var rectangle = {
 
 ### Part 2, Triangle
 
-Given the following a `triangle` object like the one below, write the following functions:
+Given the following `triangle` object like the one below, write the following functions:
 
 * isEquilateral - Returns whether the triangle is equilateral or not
 * isIsosceles - Returns whether the triangle is isosceles or not
