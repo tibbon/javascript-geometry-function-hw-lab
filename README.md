@@ -33,3 +33,9 @@ var triangle = {
   sideC: 4
 };
 ```
+
+#### Optional Bonus
+
+Geometry shapes aren't fun if you can't see them. 
+
+Use the [Raphaël](http://raphaeljs.com/) javascript library to draw the shapes on screen. We haven't explained how to do this, but if you're looking for a challenge, here ya go!
