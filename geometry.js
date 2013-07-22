@@ -25,8 +25,18 @@ var triangle = {
   sideA: 3,
   sideB: 4,
   sideC: 4,
-  isEquilateral: function() {
+  isType: function() {
+    if (this.sideA == this.sideB == this.sideC) {
+      return "This is an equilateral triangle.";
+    } else {
+      return "This is an isosceles triangle.";
+    }
+    area: function() {
+      return (this.sideA * this.sideB) / 2;
+    }
+    isObtuse: function() {
 
+    }
   }
 
 };
