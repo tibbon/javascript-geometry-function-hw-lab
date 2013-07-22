@@ -9,18 +9,24 @@ var rectangle = {
     console.log((this.length * 2) + (this.width * 2));
         },
   isSquare: function(){
-   if {this.width == this.length};
-    return "Yup, thats a Square";
+   if (this.width == this.length) {
+    return "Yup, thats a Sq"
    else
-    return "Nah..Thats something else. You weird";
-  };
+    return "Nah..Thats something else. You weird"
+  },
 };
-
 
 
 // Triangle
 var triangle = {
   sideA: 3,
   sideB: 4,
-  sideC: 4
+  sideC: 4,
+  isEquilateral: function(){
+    if (this.sideA == this.sideB == this.sideC) {
+      console.log("Yes this is equilateral");
+    else
+      console.log("Nah that ain't right");
+    }
+  }
 };
