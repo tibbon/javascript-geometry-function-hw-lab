@@ -29,19 +29,22 @@ var triangle = {
       alert("False");
   },
   isIsosceles: function() {
-    if (this.sideA == this.sideB)
-      alert("True");
-    else if (this.sideA == this.sideC)
-      alert("True");
-    else if (this.sideB == this.sideC)
+    if (this.sideA == this.sideB || this.sideA == this.sideC || this.sideB == this.sideC)
       alert("True");
     else
       alert("False");
   },
   area: function() {
-    alert((this.sideA*2.7) *(0.5));
+    var s = ((this.sideA + this.sideB + this.sideC) / 2);
+    alert(Math.sqrt  (s * ( s - this.sideA ) * ( s - this.sideB ) * ( s - this.sideC )) );
   },
   isObtuse: function() {
-    alert("False");
+    if (Math.pow(this.sideA, 2) + Math.pow(this.sideB, 2) < Math.pow(this.sideC, 2) ||
+        Math.pow(this.sideA, 2) + Math.pow(this.sideC, 2) < Math.pow(this.sideB, 2) ||
+        Math.pow(this.sideB, 2) + Math.pow(this.sideC, 2) < Math.pow(this.sideA, 2)) {
+     alert("True");
+      } else {
+      alert("False");
+    }
   }
 };
