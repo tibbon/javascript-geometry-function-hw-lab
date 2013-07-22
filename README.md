@@ -1,10 +1,10 @@
 # Geometry Function Lab/Homework
 
-Please create a javascript file in this repository that fulfills the following requirements. This assignment is due Tuesday morning at 9am. Turn it in via a Github Pull Request. 
+Please create a javascript file in this repository that fulfills the following requirements. This assignment is due Tuesday morning at 9am. Turn it in via a Github Pull Request.
 
 ### Part 1, Rectangle
 
-Given the following a `rectangle` object like the one below, write the following functions:
+Given the following `rectangle` object like the one below, write the following functions:
 
 * isSquare - Returns whether the rectangle is a square or not
 * area - Returns the area of the rectangle
@@ -36,6 +36,6 @@ var triangle = {
 
 #### Optional Bonus
 
-Geometry shapes aren't fun if you can't see them. 
+Geometry shapes aren't fun if you can't see them.
 
 Use the [Raphaël](http://raphaeljs.com/) javascript library to draw the shapes on screen. We haven't explained how to do this, but if you're looking for a challenge, here ya go!
