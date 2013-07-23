@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fb55607-b699-410c-b18d-5d618a5ad7e9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geometry.js" afterPath="$PROJECT_DIR$/geometry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="javascript-geometry-function-hw-lab.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0fb55607-b699-410c-b18d-5d618a5ad7e9" time="1374524782829" ignored="false" />
-    <file path="/geometry.js" changelist="0fb55607-b699-410c-b18d-5d618a5ad7e9" time="1374526192134" ignored="false" />
+    <file path="/geometry.js" changelist="0fb55607-b699-410c-b18d-5d618a5ad7e9" time="1374544075550" ignored="false" />
     <file path="$PROJECT_DIR$/../javascript/js/main.js" changelist="0fb55607-b699-410c-b18d-5d618a5ad7e9" time="1374525067521" ignored="false" />
     <file path="/main.js" changelist="0fb55607-b699-410c-b18d-5d618a5ad7e9" time="1374524923149" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +32,7 @@
       <file leaf-file-name="geometry.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/geometry.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="58" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.849162">
+            <state line="76" column="22" selection-start="2136" selection-end="2136" vertical-scroll-proportion="0.77374303">
               <folding />
             </state>
           </provider>
@@ -238,7 +236,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/geometry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="58" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.849162">
+        <state line="76" column="22" selection-start="2136" selection-end="2136" vertical-scroll-proportion="0.77374303">
           <folding />
         </state>
       </provider>

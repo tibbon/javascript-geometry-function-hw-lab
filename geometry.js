@@ -41,19 +41,39 @@ function isEquilateral(triangle){
 
 //isIsosceles - Returns whether the triangle is isosceles or not
 function isIsosceles(triangle){
-   if (triangle.sideA == triangle.sideB && triangle.sideB != triangle.sideC)
-       console.log("This triangle is isosceles");
-   } else if (triangle.sideB == sideC) {
-
-   }
+    if ((triangle.sideA == triangle.sideB && triangle.sideB != triangle.sideC)) {
+        console.log("This triangle is isosceles");
+    } else if ((triangle.sideB == triangle.sideC && triangle.sideC != triangle.sideA)) {
+        console.log("This triangle is isosceles");
+    } else if ((triangle.sideC == triangle.sideA && triangle.sideA != triangle.sideB)) {
+        console.log("This triangle is isosceles");
+    } else
+        console.log("This triangle is not isosceles");
 }
 
 //area - Returns the area of the Triangle
 function area(triangle){
-
+    return triangle.sideA * triangle.sideB * triangle.sideC
 }
 
 //isObtuse - Returns whether the triangle is obtuse or not
 function isObtuse(triangle){
+var mx = { value: 0, name: "" };
+for (var o in triangle)
+    if (mx["value"] < triangle[o]) {
+        mx["value"] = triangle[o];
+        mx["name"] = o;
+    }
 
+var maxSide = Math.pow(mx["value"], 2);
+var sums = 0;
+for (var o in triangle)
+    if (o != mx["name"])
+        sums += Math.pow(triangle[o], 2);
+
+if (sums > maxSide)
+    console.log("The triangle is not obtuse");
+else
+    console.log("The triangle is obtuse");
 }
+
