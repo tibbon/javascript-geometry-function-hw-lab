@@ -3,26 +3,23 @@ var rectangle = {
   length: 4,
   width: 4,
 
-
 isSquare: function(){
-  if(this.length === this.width)
-    (alert("that is a square"));
-  else
-    (alert("that is not a square"));
-}
-
-
-Sqarea: function(){
-  result = this.length * this.width;
-  console.log(result);
-}
-
-
+    if(this.length === this.width)
+      alert("that is a square");
+  } else {
+      alert("that is not a square");
+},
+area: function(){
+    result = this.length * this.width;
+    console.log(result);
+  },
 perimeter: function(){
-  result = (this.length * 2) + (this.width * 2);
-  return result;
-}
+    result = (this.length * 2) + (this.width * 2);
+    return result;
+  }
 };
+
+
 rectangle.isSquare();
 rectangle.area();
 rectangle.perimeter();
@@ -38,7 +35,7 @@ var triangle = {
 function isIsosceles(){
   if (sideA === sideB != sideC|| sideA === sideC != sideB || sideB === sideC != sideA);
     console.log("this is a isosceles triangle");
-  else
+} else {
     console.log("this is not an isosceles");
 }
 
@@ -47,7 +44,7 @@ function isIsosceles(){
 function isEquallateral(){
   if (sideC === sideB === sideA)
       (console.log("this is an equallateral"));
-    else
+} else {
       (console.log("this is not equallateral"));
 }
 
