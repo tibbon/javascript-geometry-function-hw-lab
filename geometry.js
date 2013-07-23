@@ -76,4 +76,3 @@ if (sums > maxSide)
 else
     console.log("The triangle is obtuse");
 }
-
