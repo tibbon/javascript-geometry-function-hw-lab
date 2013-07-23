@@ -9,12 +9,9 @@ var rectangle = {
        return false;
      }
    },
-  area: function() {return parseFloat(this.length) * parseFloat(this.width);},
-  perimeter: function() {return parseFloat(this.length) * 2 + parseFloat(this.width) * 2;}
+  area: function() {return this.length * this.width;},
+  perimeter: function() {return this.length * 2 + this.width * 2;}
 };
-
-
-
 
 // Triangle
 var triangle = {
@@ -48,7 +45,6 @@ var triangle = {
   }
 };
 
-// Therefore, an obtuse triangle satisfies one of a^2+b^2<c^2, b^2+c^2<a^2, or c^2+a^2<b^2.
 alert(rectangle.isSquare());
 alert(rectangle.area());
 alert(rectangle.perimeter());
@@ -56,3 +52,5 @@ alert(triangle.isEquilateral());
 alert(triangle.isIsosceles());
 alert(triangle.area());
 alert(triangle.isObtuse());
+
+
