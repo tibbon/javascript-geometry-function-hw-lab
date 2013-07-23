@@ -43,6 +43,16 @@ function isIso(A, B, C) {
   }
 }
 function triArea(A, B, C) {
-  var area = ((A + B + C) * 0.5);
-  return Math.sqrt(area(area - A)(area - B)(area - C));
+  var area = ((A + B + C) / 2);
+  console.log(Math.sqrt(area * (area - A) * (area - B) * (area - C)));
 }
+function isObtuse(A, B, C) {
+  if (Math.pow(A, 2) + Math.pow(B, 2) < Math.pow(C, 2) ||
+      Math.pow(A, 2) + Math.pow(C, 2) < Math.pow(B, 2) ||
+      Math.pow(B, 2) + Math.pow(C, 2) < Math.pow(A, 2)
+      ) { console.log("So obtuse");
+      } else {
+    return "Nobtuse";
+  }
+}
+// c2 = a2 + b2 - 2ab cos(C)
