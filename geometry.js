@@ -1,37 +1,31 @@
 // Rectangle
 var rectangle = {
   length: 4,
-  width: 4
-};
-
-var msg = prompt("give me some parameters?");
-
-var length = (prompt('gimme the length');
-var width = prompt('gimme the width');
+  width: 4,
 
 
-
-
-function isSquare(length, width){
-  if(this.length / this.width === 0)
+isSquare: function(){
+  if(this.length === this.width)
     (alert("that is a square"));
   else
     (alert("that is not a square"));
 }
 
 
-function area(length, width){
+Sqarea: function(){
   result = this.length * this.width;
   console.log(result);
 }
 
 
-function perimeter(){
+perimeter: function(){
   result = (this.length * 2) + (this.width * 2);
   return result;
 }
-
-
+};
+rectangle.isSquare();
+rectangle.area();
+rectangle.perimeter();
 
 
 // Triangle
@@ -43,9 +37,9 @@ var triangle = {
 
 function isIsosceles(){
   if (sideA === sideB != sideC|| sideA === sideC != sideB || sideB === sideC != sideA);
-    (console.log("this is a isosceles triangle"));
+    console.log("this is a isosceles triangle");
   else
-    (console.log("this is not an isosceles"));
+    console.log("this is not an isosceles");
 }
 
 
