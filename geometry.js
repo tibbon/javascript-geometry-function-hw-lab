@@ -21,9 +21,9 @@ var rectangle = {
 
 // Triangle
 var triangle = {
-  sideA: 3,
+  sideA: 4,
   sideB: 4,
-  sideC: 4,
+  sideC: 3,
   isEquilateral: function(){
     if (this.sideA == this.sideB && this.sideB == this.sideC) {
       console.log("You have an equilateral triangle");
@@ -50,4 +50,10 @@ var triangle = {
   }
 }
 
+function draw() {
+  var paper = Raphael('draw', 'draw', 320, 200);
+  var rect = paper.rect(20,20,rectangle.width,rectangle.length);
+  var tri = paper.path("M 100 20 l "+triangle.sideA+" 0 l 0 "+triangle.sideB+" l "+(-triangle.sideA)+(-triangle.sideB));
+};
 
+draw();
