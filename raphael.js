@@ -54,7 +54,7 @@
      = (object) array of returned values from the listeners
     \*/
         eve = function (name, scope) {
-      name = String(name);
+			name = String(name);
             var e = events,
                 oldstop = stop,
                 args = Array.prototype.slice.call(arguments, 2),
@@ -114,8 +114,8 @@
             current_event = ce;
             return out.length ? out : null;
         };
-    // Undocumented. Debug only.
-    eve._events = events;
+		// Undocumented. Debug only.
+		eve._events = events;
     /*\
      * eve.listeners
      [ method ]
@@ -180,15 +180,15 @@
      | eve.on("mouse", scream);
      | eve.on("mouse", catchIt)(1);
      * This will ensure that `catchIt()` function will be called before `eatIt()`.
-   *
+	 *
      * If you want to put your handler before non-indexed handlers, specify a negative value.
      * Note: I assume most of the time you don’t need to worry about z-index, but it’s nice to have this feature “just in case”.
     \*/
     eve.on = function (name, f) {
-    name = String(name);
-    if (typeof f != "function") {
-      return function () {};
-    }
+		name = String(name);
+		if (typeof f != "function") {
+			return function () {};
+		}
         var names = name.split(separator),
             e = events;
         for (var i = 0, ii = names.length; i < ii; i++) {
@@ -211,23 +211,23 @@
      [ method ]
      **
      * Returns function that will fire given event with optional arguments.
-   * Arguments that will be passed to the result function will be also
-   * concated to the list of final arguments.
-   | el.onclick = eve.f("click", 1, 2);
-   | eve.on("click", function (a, b, c) {
-   |     console.log(a, b, c); // 1, 2, [event object]
-   | });
+	 * Arguments that will be passed to the result function will be also
+	 * concated to the list of final arguments.
+ 	 | el.onclick = eve.f("click", 1, 2);
+ 	 | eve.on("click", function (a, b, c) {
+ 	 |     console.log(a, b, c); // 1, 2, [event object]
+ 	 | });
      > Arguments
-   - event (string) event name
-   - varargs (…) and any other arguments
-   = (function) possible event handler function
+	 - event (string) event name
+	 - varargs (…) and any other arguments
+	 = (function) possible event handler function
     \*/
-  eve.f = function (event) {
-    var attrs = [].slice.call(arguments, 1);
-    return function () {
-      eve.apply(null, [event, null].concat(attrs).concat([].slice.call(arguments, 0)));
-    };
-  };
+	eve.f = function (event) {
+		var attrs = [].slice.call(arguments, 1);
+		return function () {
+			eve.apply(null, [event, null].concat(attrs).concat([].slice.call(arguments, 0)));
+		};
+	};
     /*\
      * eve.stop
      [ method ]
@@ -274,7 +274,7 @@
      [ method ]
      **
      * Removes given function from the list of event listeners assigned to given name.
-   * If no arguments specified all the events will be cleared.
+	 * If no arguments specified all the events will be cleared.
      **
      > Arguments
      **
@@ -288,10 +288,10 @@
      * See @eve.off
     \*/
     eve.off = eve.unbind = function (name, f) {
-    if (!name) {
-        eve._events = events = {n: {}};
-      return;
-    }
+		if (!name) {
+		    eve._events = events = {n: {}};
+			return;
+		}
         var names = name.split(separator),
             e,
             key,
@@ -8078,80 +8078,5 @@
 
     return R;
 }));
-
-
-
-// Rectangle
-var rectangle = {
-  length: 4,
-  width: 4,
-  isSquare: function() {
-    if (this.length == this.width)
-      alert("True");
-    else
-      alert("NOPE");
-    },
-  area: function() {
-    alert(this.length * this.width);
-    },
-  perimeter: function(){
-    alert((this.length*2) + (this.width*2));
-  }
-};
-
-
-// Triangle
-var triangle = {
-  sideA: 3,
-  sideB: 4,
-  sideC: 4,
-  isEquilateral: function() {
-    if (this.sideA == this.sideB == this.sideC)
-      alert("True");
-    else
-      alert("False");
-  },
-  isIsosceles: function() {
-    if (this.sideA == this.sideB || this.sideA == this.sideC || this.sideB == this.sideC)
-      alert("True");
-    else
-      alert("False");
-  },
-  area: function() {
-    var s = ((this.sideA + this.sideB + this.sideC) / 2);
-    alert(Math.sqrt  (s * ( s - this.sideA ) * ( s - this.sideB ) * ( s - this.sideC )) );
-  },
-  isObtuse: function() {
-    if (Math.pow(this.sideA, 2) + Math.pow(this.sideB, 2) < Math.pow(this.sideC, 2) ||
-        Math.pow(this.sideA, 2) + Math.pow(this.sideC, 2) < Math.pow(this.sideB, 2) ||
-        Math.pow(this.sideB, 2) + Math.pow(this.sideC, 2) < Math.pow(this.sideA, 2)) {
-     alert("True");
-      } else {
-      alert("False");
-    }
-  }
-};
-
-
-//practicing with Raphael
-window.onload = function() {
-  var paper = new Raphael(document.getElementById('canvas'), 500, 500);
-  var length = rectangle.length * 50
-  var width = rectangle.width * 50
-  var rect = paper.rect(length, length, width, width);
-}
-
-// drawing triangle with Path...tough to get precisely equal to length of our triangle
-window.onload = function() {
-    var paper = new Raphael(document.getElementById('canvas'), 500, 500);
-    // triangle is undefined here in console?
-    // var side1 = triangle.sideA * 10
-    // var side2 = triangle.sideB * 10
-    // var side3 = triangle.sideC * 10
-
-    //looks like a triangle - :)
-    var triangle = paper.path("M 250 250 l 0 -80 l -80 0 l  z");
-}
-
 
 
