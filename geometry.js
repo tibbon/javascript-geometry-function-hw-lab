@@ -8141,7 +8141,17 @@ window.onload = function() {
   var rect = paper.rect(length, length, width, width);
 }
 
+// drawing triangle with Path...tough to get precisely equal to length of our triangle
+window.onload = function() {
+    var paper = new Raphael(document.getElementById('canvas'), 500, 500);
+    // triangle is undefined here in console?
+    // var side1 = triangle.sideA * 10
+    // var side2 = triangle.sideB * 10
+    // var side3 = triangle.sideC * 10
 
+    //looks like a triangle - :)
+    var triangle = paper.path("M 250 250 l 0 -80 l -80 0 l  z");
+}
 
 
 
