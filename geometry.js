@@ -1,3 +1,60 @@
+// this is a new object called Rectangle
+function Rectangle(length, width) {
+  this.length = length;
+  this.width = width;
+}
+// Adding these functions below to apply to each object of rectangle created
+Rectangle.prototype.isSquare = function () {
+  if (this.length === this.width) {
+    return true;
+  } else {
+    return false;
+  }
+};
+Rectangle.prototype.squArea = function () {
+  return this.length * this.width;
+};
+Rectangle.prototype.periMeter = function () {
+  return this.length + this.length + this.width + this.width;
+};
+
+//Triangle time - new triangle object
+function Triangle(sideA, sideB, sideC) {
+  this.sideA = sideA;
+  this.sideB = sideB;
+  this.sideC = sideC;
+}
+// Triangle functions
+Triangle.prototype.isEqui = function () {
+  if (this.sideA === this.sideB && this.sideA === this.sideC) {
+    return true;
+  } else {
+    return false;
+  }
+};
+Triangle.prototype.isIso = function() {
+  if (this.sideA === this.sideB || this.sideC) {
+    return true;
+  } else {
+    return false;
+  }
+};
+Triangle.prototype.triArea = function() {
+  var area = ((this.sideA + this.sideB + this.sideC) / 2);
+  return Math.sqrt(area * (area - this.sideA) * (area - this.sideB) * (area - this.sideC));
+};
+Triangle.prototype.isObtuse = function() {
+  if (Math.pow(this.sideA, 2) + Math.pow(this.sideB, 2) < Math.pow(this.sideC, 2) ||
+      Math.pow(this.sideA, 2) + Math.pow(this.sideC, 2) < Math.pow(this.sideB, 2) ||
+      Math.pow(this.sideB, 2) + Math.pow(this.sideC, 2) < Math.pow(this.sideA, 2)
+      ) { return true;
+      } else {
+    return false;
+  }
+};
+
+// Older code
+
 // Rectangle
 var rectangle = {
   length: 4,
