@@ -42,6 +42,9 @@ var triangle = {
       return false;
     }
   },
+  area: function(){
+    return this.sideA * this.sideB;
+  }
 };
 
 
@@ -51,6 +54,7 @@ console.log(rectangle.area());
 console.log(rectangle.perimeter());
 console.log(triangle.isEquilateral());
 console.log(triangle.isIsosceles());
+console.log(triangle.area());
 
 // This defines a function
 function testFunction(){
