@@ -3,12 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title>Function function, what's your function?</title>
-    <script src="geometry.js"></script>
+    <script type="text/javascript" src="geometry.js"></script>
+    <script type="text/javascript" src="raphael-min.js"></script>
+    <style type="text/css">
+      #canvas_container {
+          width: 500px;
+          border: 1px solid #aaa;
+      }
+    </style>
 </head>
 
 <body id="home">
     <h1>Geometry Functions!</h1>
     <p>You probably want to look to your console!</p>
-    <p>No need to put the results here.. yet.</p>
+    <p>Check out the shape below!</p>
+    Draw your rectangle (Input: 1-10):
+    <input id="rectLength" type="text" placeholder="Length">
+    <input id="rectWidth" type="text" placeholder="Width">
+    <button onclick="drawRect()">Draw it</button><br>
+    Draw your triangle (Input: 1-10)->
+    <input id="lineA" type="text" placeholder="Side A">
+    <input id="lineB" type="text" placeholder="Side B">
+    <button onclick="drawTri()">Draw it</button><br>
+    *** Side C is defined for you.
+
+
+   <div id="canvas_container"></div>
 </body>
 </html>
